@@ -8,7 +8,6 @@ import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.google.android.material.tabs.TabLayoutMediator
 import com.shahzaib.viewpager.databinding.DemoViewpagerActivityBinding
 
-
 class DemoViewPagerActivity: AppCompatActivity() {
     private lateinit var binding: DemoViewpagerActivityBinding
     private lateinit var mAdapter: ViewPagerAdapter
@@ -26,7 +25,7 @@ class DemoViewPagerActivity: AppCompatActivity() {
 
         binding.pager.offscreenPageLimit = 6
 
-        tabLayoutMediator = TabLayoutMediator(binding.tabLayout, binding.pager) { tab, position ->
+        tabLayoutMediator = TabLayoutMediator(binding.tabLayout, binding.pager) { _, position ->
             Log.e("TabLayout", "Mediator: Position: $position")
             mAdapter.createFragment(position)
         }
@@ -48,6 +47,5 @@ class DemoViewPagerActivity: AppCompatActivity() {
 
         binding.pager.adapter = mAdapter
         tabLayoutMediator.attach()
-
     }
 }
