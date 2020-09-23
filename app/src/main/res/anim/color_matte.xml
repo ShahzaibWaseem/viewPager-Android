@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xmeml>
+<xmeml version="4">
+	<sequence id="sequence-1" TL.SQAudioVisibleBase="0" TL.SQVideoVisibleBase="0" TL.SQVisibleBaseTime="56956222442" TL.SQAVDividerPosition="0.5" TL.SQHideShyTracks="0" TL.SQHeaderWidth="236" Monitor.ProgramZoomOut="223534080000" Monitor.ProgramZoomIn="0" TL.SQTimePerPixel="0.0014209686414981206" MZ.EditLine="223534080000" MZ.Sequence.PreviewFrameSizeHeight="1080" MZ.Sequence.PreviewFrameSizeWidth="1920" MZ.Sequence.AudioTimeDisplayFormat="200" MZ.Sequence.PreviewRenderingClassID="1297106761" MZ.Sequence.PreviewRenderingPresetCodec="1297107278" MZ.Sequence.PreviewRenderingPresetPath="EncoderPresets\SequencePreview\cc7991f5-c236-4db1-957e-2c71f924e81c\I-Frame Only MPEG.epr" MZ.Sequence.PreviewUseMaxRenderQuality="false" MZ.Sequence.PreviewUseMaxBitDepth="false" MZ.Sequence.EditingModeGUID="cc7991f5-c236-4db1-957e-2c71f924e81c" MZ.Sequence.VideoTimeDisplayFormat="101" MZ.WorkOutPoint="1270080000000" MZ.WorkInPoint="0" explodedTracks="true">
+		<uuid>72be96b0-97b8-43a1-90b2-766a089d9fb0</uuid>
+		<duration>22</duration>
+		<rate>
+			<timebase>25</timebase>
+			<ntsc>FALSE</ntsc>
+		</rate>
+		<name>Color Matte</name>
+		<media>
+			<video>
+				<format>
+					<samplecharacteristics>
+						<rate>
+							<timebase>25</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<codec>
+							<name>Apple ProRes 422</name>
+							<appspecificdata>
+								<appname>Final Cut Pro</appname>
+								<appmanufacturer>Apple Inc.</appmanufacturer>
+								<appversion>7.0</appversion>
+								<data>
+									<qtcodec>
+										<codecname>Apple ProRes 422</codecname>
+										<codectypename>Apple ProRes 422</codectypename>
+										<codectypecode>apcn</codectypecode>
+										<codecvendorcode>appl</codecvendorcode>
+										<spatialquality>1024</spatialquality>
+										<temporalquality>0</temporalquality>
+										<keyframerate>0</keyframerate>
+										<datarate>0</datarate>
+									</qtcodec>
+								</data>
+							</appspecificdata>
+						</codec>
+						<width>1920</width>
+						<height>1080</height>
+						<anamorphic>FALSE</anamorphic>
+						<pixelaspectratio>square</pixelaspectratio>
+						<fielddominance>none</fielddominance>
+						<colordepth>24</colordepth>
+					</samplecharacteristics>
+				</format>
+				<track TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1">
+					<generatoritem id="clipitem-1">
+						<name>Color Matte</name>
+						<enabled>TRUE</enabled>
+						<duration>1080000</duration>
+						<start>0</start>
+						<end>22</end>
+						<in>90000</in>
+						<out>90022</out>
+						<rate>
+							<timebase>25</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<effect>
+							<name>Color</name>
+							<effectid>Color</effectid>
+							<effectcategory>Matte</effectcategory>
+							<effecttype>generator</effecttype>
+							<mediatype>video</mediatype>
+							<parameter authoringApp="PremierePro">
+								<parameterid>fillcolor</parameterid>
+								<name>Color</name>
+								<value>
+									<alpha>0</alpha>
+									<red>255</red>
+									<green>255</green>
+									<blue>255</blue>
+								</value>
+							</parameter>
+						</effect>
+					</generatoritem>
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="0">
+					<clipitem id="clipitem-2">
+						<masterclipid>masterclip-2</masterclipid>
+						<name>Graphic</name>
+						<enabled>TRUE</enabled>
+						<duration>1080000</duration>
+						<rate>
+							<timebase>25</timebase>
+							<ntsc>FALSE</ntsc>
+						</rate>
+						<start>0</start>
+						<end>22</end>
+						<in>90000</in>
+						<out>90022</out>
+						<pproTicksIn>914457600000000</pproTicksIn>
+						<pproTicksOut>914681134080000</pproTicksOut>
+						<alphatype>straight</alphatype>
+						<pixelaspectratio>square</pixelaspectratio>
+						<anamorphic>FALSE</anamorphic>
+						<file id="file-1">
+							<name>Graphic</name>
+							<mediaSource>GraphicAndType</mediaSource>
+							<rate>
+								<timebase>30</timebase>
+								<ntsc>TRUE</ntsc>
+							</rate>
+							<timecode>
+								<rate>
+									<timebase>30</timebase>
+									<ntsc>TRUE</ntsc>
+								</rate>
+								<string>00;00;00;00</string>
+								<frame>0</frame>
+								<displayformat>DF</displayformat>
+							</timecode>
+							<media>
+								<video>
+									<samplecharacteristics>
+										<rate>
+											<timebase>30</timebase>
+											<ntsc>TRUE</ntsc>
+										</rate>
+										<width>1920</width>
+										<height>1080</height>
+										<anamorphic>FALSE</anamorphic>
+										<pixelaspectratio>square</pixelaspectratio>
+										<fielddominance>none</fielddominance>
+									</samplecharacteristics>
+								</video>
+							</media>
+						</file>
+						<filter>
+							<effect>
+								<name>Shape</name>
+								<effectid>GraphicAndShape</effectid>
+								<effectcategory>graphic</effectcategory>
+								<effecttype>filter</effecttype>
+								<mediatype>video</mediatype>
+								<pproBypass>false</pproBypass>
+								<parameter authoringApp="PremierePro">
+									<parameterid>1</parameterid>
+									<name>Path</name>
+									<hash>ab5a3290-1c94-7e51-d0b8-a1ca00000085</hash>
+									<value>AgAAAAQAAAABAAAAAAC0QgAAAABwLSFCAAAAAKS0C0MAAAAAAQAAAAAANEMAALRCAAA0Q3AtIUIAADRDpLQLQwEAAAAAALRCAAA0Q6S0C0MAADRDcC0hQgAANEMBAAAAAAAAAAAAtEIAAAAApLQLQwAAAABwLSFCAQ==</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>2</parameterid>
+									<name>Appearance</name>
+									<hash>5c62e543-f771-f281-a044-24fb00000200</hash>
+									<value>7AEAAAAAAAB7ACIAbQBTAHQAeQBsAGUAIgA6AHsAIgBtAEYAaQBsAGwAQwBvAGwAbwByACIAOgAxADYANwAxADEANgA4ADAALAAiAG0ARgBpAGwAbABWAGkAcwBpAGIAbABlACIAOgB0AHIAdQBlACwAIgBtAFMAaABhAGQAbwB3AEEAbgBnAGwAZQAiADoAMQAzADUALAAiAG0AUwBoAGEAZABvAHcAQgBsAHUAcgAiADoAMAAsACIAbQBTAGgAYQBkAG8AdwBDAG8AbABvAHIAIgA6ADAALAAiAG0AUwBoAGEAZABvAHcATwBmAGYAcwBlAHQAIgA6ADEAMAAsACIAbQBTAGgAYQBkAG8AdwBPAHAAYQBjAGkAdAB5ACIAOgAxADAAMAAsACIAbQBTAGgAYQBkAG8AdwBWAGkAcwBpAGIAbABlACIAOgBmAGEAbABzAGUALAAiAG0AUwB0AHIAbwBrAGUAQwBvAGwAbwByACIAOgAxADYANwA3ADcAMgAxADUALAAiAG0AUwB0AHIAbwBrAGUAVgBpAHMAaQBiAGwAZQAiADoAZgBhAGwAcwBlACwAIgBtAFMAdAByAG8AawBlAFcAaQBkAHQAaAAiADoAMQB9ACwAIgBtAFYAZQByAHMAaQBvAG4AIgA6ADEAfQA=</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>3</parameterid>
+									<name>Transform</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>11</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>false</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>4</parameterid>
+									<name>Position</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<value>-91445760000000000,0.17597764730453491:0.45161288976669312,0,0,0,0,0,0,5,4,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>5</parameterid>
+									<name>Scale</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>4000</UpperBound>
+									<value>-91445760000000000,100.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>6</parameterid>
+									<name>Horizontal Scale</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>4000</UpperBound>
+									<value>-91445760000000000,100.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>7</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,true,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>8</parameterid>
+									<name>Rotation</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>3</ParameterControlType>
+									<LowerBound>-32768</LowerBound>
+									<UpperBound>32767</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>9</parameterid>
+									<name>Opacity</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>100</UpperBound>
+									<value>-91445760000000000,100.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>10</parameterid>
+									<name>Anchor Point</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<value>-91445760000000000,0:0,0,0,0,0,0,0,5,4,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>11</parameterid>
+									<name></name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>12</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>false</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>12</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>13</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>14</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>15</parameterid>
+									<name> </name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>4</ParameterControlType>
+									<LowerBound>false</LowerBound>
+									<UpperBound>true</UpperBound>
+									<value>-91445760000000000,false,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>16</parameterid>
+									<name>Parent Width</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>20000</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>17</parameterid>
+									<name>Parent Height</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>2</ParameterControlType>
+									<LowerBound>0</LowerBound>
+									<UpperBound>20000</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+								<parameter authoringApp="PremierePro">
+									<parameterid>18</parameterid>
+									<name>Parent Rotation</name>
+									<IsTimeVarying>false</IsTimeVarying>
+									<ParameterControlType>3</ParameterControlType>
+									<LowerBound>-32768</LowerBound>
+									<UpperBound>32767</UpperBound>
+									<value>-91445760000000000,0.,0,0,0,0,0,0</value>
+								</parameter>
+							</effect>
+						</filter>
+						<logginginfo>
+							<description></description>
+							<scene></scene>
+							<shottake></shottake>
+							<lognote></lognote>
+							<good></good>
+							<originalvideofilename></originalvideofilename>
+							<originalaudiofilename></originalaudiofilename>
+						</logginginfo>
+						<colorinfo>
+							<lut></lut>
+							<lut1></lut1>
+							<asc_sop></asc_sop>
+							<asc_sat></asc_sat>
+							<lut2></lut2>
+						</colorinfo>
+						<labels>
+						</labels>
+					</clipitem>
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+				<track TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="0">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+				</track>
+			</video>
+			<audio>
+				<numOutputChannels>2</numOutputChannels>
+				<format>
+					<samplecharacteristics>
+						<depth>16</depth>
+						<samplerate>48000</samplerate>
+					</samplecharacteristics>
+				</format>
+				<outputs>
+					<group>
+						<index>1</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>1</index>
+						</channel>
+					</group>
+					<group>
+						<index>2</index>
+						<numchannels>1</numchannels>
+						<downmix>0</downmix>
+						<channel>
+							<index>2</index>
+						</channel>
+					</group>
+				</outputs>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="Balance" currentExplodedTrackIndex="0" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="Balance" currentExplodedTrackIndex="1" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="Balance" currentExplodedTrackIndex="0" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="Balance" currentExplodedTrackIndex="1" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="Balance" currentExplodedTrackIndex="0" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>1</outputchannelindex>
+				</track>
+				<track TL.SQTrackAudioKeyframeStyle="0" TL.SQTrackShy="0" TL.SQTrackExpandedHeight="25" TL.SQTrackExpanded="0" MZ.TrackTargeted="1" PannerCurrentValue="0.5" PannerIsInverted="true" PannerStartKeyframe="-91445760000000000,0.5,0,0,0,0,0,0" PannerName="Balance" currentExplodedTrackIndex="1" totalExplodedTrackCount="2" premiereTrackType="Stereo">
+					<enabled>TRUE</enabled>
+					<locked>FALSE</locked>
+					<outputchannelindex>2</outputchannelindex>
+				</track>
+			</audio>
+		</media>
+		<timecode>
+			<rate>
+				<timebase>25</timebase>
+				<ntsc>FALSE</ntsc>
+			</rate>
+			<string>00:00:00:00</string>
+			<frame>0</frame>
+			<displayformat>NDF</displayformat>
+		</timecode>
+		<labels>
+			<label2>Forest</label2>
+		</labels>
+	</sequence>
+</xmeml>
