@@ -23,28 +23,28 @@ class Tab4: BaseFragment() {
 
     override fun onResume() {
         super.onResume()
-        binding.tabText.visibility = View.VISIBLE
+        binding.screen4Layout.visibility = View.VISIBLE
         Log.e(TAG,"onResume Previous Position:$previousPosition, Current Position:$currentPosition")
     }
 
     override fun onPause() {
-        binding.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
-        binding.tabText.visibility = View.GONE
+        binding.screen4Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
+        binding.screen4Layout.visibility = View.GONE
         Log.e(TAG, "onPause")
         super.onPause()
     }
 
     fun startAnimation() {
         if (previousPosition > currentPosition)
-            binding.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_left_animation))
+            binding.screen4Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_left_animation))
         else
-            binding.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_right_animation))
+            binding.screen4Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_right_animation))
     }
 
     fun outgoingAnimation() {
         if (previousPosition > currentPosition)
-            binding.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
+            binding.screen4Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
         else
-            binding.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_right_animation))
+            binding.screen4Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_right_animation))
     }
 }

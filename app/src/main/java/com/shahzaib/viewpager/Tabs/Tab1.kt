@@ -23,13 +23,13 @@ class Tab1: BaseFragment() {
 
     override fun onResume() {
         super.onResume()
-        binding!!.tabText.visibility = View.VISIBLE
+        binding!!.screen1Layout.visibility = View.VISIBLE
         Log.e(TAG,"onResume Previous Position:$previousPosition, Current Position:$currentPosition")
     }
 
     override fun onPause() {
-        binding!!.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
-        binding!!.tabText.visibility = View.GONE
+        binding!!.screen1Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
+        binding!!.screen1Layout.visibility = View.GONE
         Log.e(TAG, "onPause")
         super.onPause()
     }
@@ -37,16 +37,22 @@ class Tab1: BaseFragment() {
     fun startAnimation() {
         if(binding != null) {
             if (previousPosition > currentPosition)
-                binding!!.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_left_animation))
+            {
+                binding!!.screen1Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_left_animation))
+            }
             else
-                binding!!.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_right_animation))
+                binding!!.screen1Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_right_animation))
         }
     }
 
     fun outgoingAnimation() {
-        if (previousPosition > currentPosition)
-            binding!!.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
+        if (previousPosition > currentPosition){
+//            binding!!.screen1Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
+            binding!!.background.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_left_rotate_anti))
+            binding!!.planner.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_out_left))
+            binding!!.man.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_left_man))
+        }
         else
-            binding!!.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_right_animation))
+            binding!!.screen1Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_right_animation))
     }
 }
