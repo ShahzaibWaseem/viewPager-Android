@@ -43,8 +43,8 @@ class Tab2: BaseFragment() {
 
     fun outgoingAnimation() {
         if (previousPosition > currentPosition)
-            binding!!.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
+            binding.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
         else
-            binding!!.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_right_animation))
+            binding.tabText.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_right_animation))
     }
 }
