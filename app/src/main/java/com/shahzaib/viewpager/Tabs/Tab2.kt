@@ -15,7 +15,6 @@ class Tab2: BaseFragment() {
         super.onCreateView(inflater, container, savedInstanceState)
         Log.e(TAG, "onCreateView")
         binding = Tab2Binding.inflate(layoutInflater)
-        currentPosition = 1
         return binding.root
     }
 
