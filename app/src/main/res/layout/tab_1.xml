@@ -28,7 +28,7 @@
             android:id="@+id/planner"
             android:layout_width="150dp"
             android:layout_height="200dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginEnd="50dp"
             android:src="@drawable/screen_1_planner"
             app:layout_constraintBottom_toBottomOf="@+id/background"
@@ -39,7 +39,7 @@
             android:id="@+id/man"
             android:layout_width="150dp"
             android:layout_height="200dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="5dp"
             android:src="@drawable/screen_1_man"
             app:layout_constraintBottom_toBottomOf="@id/background"
             app:layout_constraintEnd_toEndOf="@+id/background" />

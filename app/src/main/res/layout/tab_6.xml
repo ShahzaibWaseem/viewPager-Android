@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/background"
             android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_height="250dp"
             android:src="@drawable/screen_6_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
         <ImageView
             android:id="@+id/computer"
             android:layout_width="320dp"
-            android:layout_height="320dp"
+            android:layout_height="300dp"
             android:src="@drawable/screen_6_computer"
             android:layout_marginTop="20dp"
             app:layout_constraintBottom_toBottomOf="@+id/background"
@@ -37,9 +37,11 @@
             android:id="@+id/man"
             android:layout_width="170dp"
             android:layout_height="220dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="20dp"
             android:src="@drawable/screen_6_man"
             app:layout_constraintStart_toStartOf="@+id/background"
+            app:layout_constraintTop_toTopOf="@+id/background"
             app:layout_constraintBottom_toBottomOf="@id/background" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/background"
             android:layout_width="300dp"
-            android:layout_height="220dp"
+            android:layout_height="250dp"
             android:src="@drawable/screen_4_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
             android:id="@+id/lady"
             android:layout_width="150dp"
             android:layout_height="165dp"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/screen_4_lady"
             app:layout_constraintBottom_toBottomOf="@id/background"
             app:layout_constraintEnd_toEndOf="@+id/background" />

@@ -17,7 +17,7 @@
         <ImageView
             android:id="@+id/background"
             android:layout_width="300dp"
-            android:layout_height="220dp"
+            android:layout_height="250dp"
             android:src="@drawable/screen_2_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +28,7 @@
             android:id="@+id/computer"
             android:layout_width="250dp"
             android:layout_height="200dp"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/screen_2_computer"
             app:layout_constraintBottom_toBottomOf="@+id/background"
             app:layout_constraintStart_toStartOf="@+id/background"
@@ -38,7 +38,7 @@
             android:id="@+id/doctor"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginBottom="45dp"
+            android:layout_marginBottom="65dp"
             android:src="@drawable/screen_2_doctor"
             app:layout_constraintBottom_toBottomOf="@id/background"
             app:layout_constraintEnd_toEndOf="@+id/computer" />

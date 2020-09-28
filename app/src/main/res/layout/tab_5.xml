@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/background"
             android:layout_width="300dp"
-            android:layout_height="220dp"
+            android:layout_height="250dp"
             android:src="@drawable/screen_5_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

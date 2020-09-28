@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/background"
             android:layout_width="300dp"
-            android:layout_height="210dp"
+            android:layout_height="250dp"
             android:src="@drawable/screen_7_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +28,7 @@
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:src="@drawable/screen_7_plant"
+            android:layout_marginBottom="20dp"
             android:layout_marginEnd="50dp"
             app:layout_constraintBottom_toBottomOf="@+id/background"
             app:layout_constraintEnd_toEndOf="@+id/background"/>
@@ -37,7 +38,7 @@
             android:layout_width="150dp"
             android:layout_height="170dp"
             android:layout_marginStart="50dp"
-            android:layout_marginBottom="2dp"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/screen_7_lady"
             app:layout_constraintStart_toStartOf="@+id/background"
             app:layout_constraintBottom_toBottomOf="@id/background" />
