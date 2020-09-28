@@ -13,7 +13,7 @@ The Animations are not made using the default animation methods in android.
     - ViewPager2 Version1.0.0
 
 ### Implementation Details
-The main implementation of animations is done in the ```app/src/main/java/com/shahzaib/viewpager/ViewPagerAdapter``` where the animation for the current page is provided with the animations (i.e. animations for images and texts separately) of the incoming page.
+The main implementation of animations is done in the [```app/src/main/java/com/shahzaib/viewpager/ViewPagerAdapter```](https://github.com/ShahzaibWaseem/viewPager-Android/blob/master/app/src/main/java/com/shahzaib/viewpager/ViewPagerAdapter.kt) where the animation for the current page is provided with the animations (i.e. animations for images and texts separately) of the incoming page.
 
 ```kotlin
 // Handles incoming animations for the current page
