@@ -20,26 +20,23 @@ class Tab1 : BaseFragment() {
         return binding!!.root
     }
 
-    fun animate(positionOffset: Float, positionOffsetPixels: Int) {
+    fun animateImages(positionOffset: Float, positionOffsetPixels: Int) {
         when {
             positionOffsetPixels <= 100 -> {
                 binding!!.man.translationX = positionOffsetPixels.toFloat()
                 binding!!.man.rotation = positionOffsetPixels.toFloat() * 0.03F
                 binding!!.man.alpha = 1.0F - positionOffset * 2
-    //            Log.i("OnPage", "<=50: translate: ${positionOffsetPixels.toFloat() * 0.3F}, rotate: ${positionOffsetPixels.toFloat() * 0.03F}")
                 animationChange = positionOffsetPixels.toFloat() * 2
             }
             positionOffsetPixels in 101..200 -> {
                 binding!!.man.translationX = animationChange - positionOffsetPixels.toFloat()
                 binding!!.man.rotation = positionOffsetPixels.toFloat() * 0.03F
                 binding!!.man.alpha = 1.0F - positionOffset * 2
-    //            Log.i("OnPage", "51..100: translate: ${animationChange - positionOffsetPixels.toFloat()}, rotate: ${positionOffsetPixels.toFloat() * 0.03F}")
             }
             else -> {
                 binding!!.man.translationX = animationChange - positionOffsetPixels.toFloat()
                 binding!!.man.rotation = positionOffsetPixels.toFloat() * 0.03F
                 binding!!.man.alpha = 1.0F - positionOffset * 2
-    //            Log.i("OnPage", "51..100: translate: ${animationChange - positionOffsetPixels.toFloat()}")
             }
         }
 
@@ -49,5 +46,15 @@ class Tab1 : BaseFragment() {
 
         binding!!.planner.translationX = - positionOffsetPixels.toFloat() * 0.2F
         binding!!.planner.alpha = 1.0F - positionOffset * 2
+    }
+
+    fun animateText(positionOffset: Float, positionOffsetPixels: Int) {
+        binding!!.textTitle.translationX = positionOffsetPixels.toFloat() * 0.4F
+        binding!!.textTitle.rotationY = positionOffsetPixels.toFloat() * 0.08F
+        binding!!.textTitle.alpha = 1.0F - positionOffset * 3
+
+        binding!!.textBody.translationX = positionOffsetPixels.toFloat() * 0.4F
+        binding!!.textBody.rotationY = positionOffsetPixels.toFloat() * 0.08F
+        binding!!.textBody.alpha = 1.0F - positionOffset * 3
     }
 }

@@ -20,7 +20,7 @@ class Tab3: BaseFragment() {
         return binding.root
     }
 
-    fun animate(positionOffset: Float, positionOffsetPixels: Int) {
+    fun animateImages(positionOffset: Float, positionOffsetPixels: Int) {
         when {
             positionOffsetPixels <= 150 -> {
                 binding.background.translationX = - positionOffsetPixels.toFloat() * 0.7F
@@ -61,5 +61,15 @@ class Tab3: BaseFragment() {
 
         binding.man.translationX = - positionOffsetPixels.toFloat() * 0.2F
         binding.man.alpha = 1.0F - positionOffset * 2
+    }
+
+    fun animateText(positionOffset: Float, positionOffsetPixels: Int) {
+        binding.textTitle.translationX = positionOffsetPixels.toFloat() * 0.4F
+        binding.textTitle.rotationY = positionOffsetPixels.toFloat() * 0.08F
+        binding.textTitle.alpha = 1.0F - positionOffset * 3
+
+        binding.textBody.translationX = positionOffsetPixels.toFloat() * 0.4F
+        binding.textBody.rotationY = positionOffsetPixels.toFloat() * 0.08F
+        binding.textBody.alpha = 1.0F - positionOffset * 3
     }
 }
