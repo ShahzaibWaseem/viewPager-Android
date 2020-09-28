@@ -5,13 +5,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
-import com.shahzaib.viewpager.R
 import com.shahzaib.viewpager.databinding.Tab6Binding
 
 class Tab6: BaseFragment() {
     private lateinit var binding: Tab6Binding
     private val TAG = "Tab6"
+    private var animationChange = 0F
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
@@ -21,30 +20,14 @@ class Tab6: BaseFragment() {
         return binding.root
     }
 
-    override fun onResume() {
-        super.onResume()
-        binding.screen6Layout.visibility = View.VISIBLE
-        Log.e(TAG,"onResume Previous Position:$previousPosition, Current Position:$currentPosition")
-    }
+    fun animate(positionOffset: Float, positionOffsetPixels: Int) {
+        binding.background.translationX = positionOffsetPixels.toFloat() * 0.6F
+        binding.background.alpha = 1.0F - positionOffset * 2
 
-    override fun onPause() {
-        binding.screen6Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
-        binding.screen6Layout.visibility = View.GONE
-        Log.e(TAG, "onPause")
-        super.onPause()
-    }
+        binding.computer.translationX = positionOffsetPixels.toFloat() * 0.2F
+        binding.computer.alpha = 1.0F - positionOffset * 2
 
-    fun startAnimation() {
-        if (previousPosition > currentPosition)
-            binding.screen6Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_left_animation))
-        else
-            binding.screen6Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_right_animation))
-    }
-
-    fun outgoingAnimation() {
-        if (previousPosition > currentPosition)
-            binding.screen6Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
-        else
-            binding.screen6Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_right_animation))
+        binding.man.translationX =  positionOffsetPixels.toFloat() * 0.2F
+        binding.man.alpha = 1.0F - positionOffset * 2
     }
 }
