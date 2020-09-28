@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">View Pager</string>
+    <string name="tab1_title">Lorem Ipsum</string>
+    <string name="tab1_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, dolor vel semper rutrum, elit enim interdum nulla, ut commodo nisi eros eget metus.</string>
+    <string name="tab2_title">Lorem Ipsum</string>
+    <string name="tab2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, dolor vel semper rutrum, elit enim interdum nulla, ut commodo nisi eros eget metus.</string>
+    <string name="tab3_title">Lorem Ipsum</string>
+    <string name="tab3_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, dolor vel semper rutrum, elit enim interdum nulla, ut commodo nisi eros eget metus.</string>
+    <string name="tab4_title">Lorem Ipsum</string>
+    <string name="tab4_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, dolor vel semper rutrum, elit enim interdum nulla, ut commodo nisi eros eget metus.</string>
+    <string name="tab5_title">Lorem Ipsum</string>
+    <string name="tab5_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, dolor vel semper rutrum, elit enim interdum nulla, ut commodo nisi eros eget metus.</string>
+    <string name="tab6_title">Lorem Ipsum</string>
+    <string name="tab6_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, dolor vel semper rutrum, elit enim interdum nulla, ut commodo nisi eros eget metus.</string>
+    <string name="tab7_title">Lorem Ipsum</string>
+    <string name="tab7_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sodales, dolor vel semper rutrum, elit enim interdum nulla, ut commodo nisi eros eget metus.</string>
+
 </resources>
