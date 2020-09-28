@@ -32,12 +32,8 @@ class Tab6: BaseFragment() {
     }
 
     fun animateText(positionOffset: Float, positionOffsetPixels: Int) {
-        binding.textTitle.translationX = positionOffsetPixels.toFloat() * 0.4F
-        binding.textTitle.rotationY = positionOffsetPixels.toFloat() * 0.08F
-        binding.textTitle.alpha = 1.0F - positionOffset * 3
-
-        binding.textBody.translationX = positionOffsetPixels.toFloat() * 0.4F
-        binding.textBody.rotationY = positionOffsetPixels.toFloat() * 0.08F
-        binding.textBody.alpha = 1.0F - positionOffset * 3
+        binding.text.translationX = positionOffsetPixels.toFloat() * 0.4F
+        binding.text.rotationY = positionOffsetPixels.toFloat() * 0.08F
+        binding.text.alpha = 1.0F - positionOffset * 3
     }
 }
