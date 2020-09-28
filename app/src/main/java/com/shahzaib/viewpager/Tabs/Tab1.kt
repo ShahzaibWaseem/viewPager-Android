@@ -5,13 +5,12 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
-import com.shahzaib.viewpager.R
 import com.shahzaib.viewpager.databinding.Tab1Binding
 
-class Tab1: BaseFragment() {
+class Tab1 : BaseFragment() {
     private var binding: Tab1Binding? = null
     private val TAG = "Tab1"
+    private var animationChange = 0F
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
@@ -21,38 +20,34 @@ class Tab1: BaseFragment() {
         return binding!!.root
     }
 
-    override fun onResume() {
-        super.onResume()
-        binding!!.screen1Layout.visibility = View.VISIBLE
-        Log.e(TAG,"onResume Previous Position:$previousPosition, Current Position:$currentPosition")
-    }
-
-    override fun onPause() {
-        binding!!.screen1Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
-        binding!!.screen1Layout.visibility = View.GONE
-        Log.e(TAG, "onPause")
-        super.onPause()
-    }
-
-    fun startAnimation() {
-        if(binding != null) {
-            if (previousPosition > currentPosition)
-            {
-                binding!!.screen1Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_left_animation))
+    fun animate(positionOffset: Float, positionOffsetPixels: Int) {
+        when {
+            positionOffsetPixels <= 100 -> {
+                binding!!.man.translationX = positionOffsetPixels.toFloat()
+                binding!!.man.rotation = positionOffsetPixels.toFloat() * 0.03F
+                binding!!.man.alpha = 1.0F - positionOffset * 2
+    //            Log.i("OnPage", "<=50: translate: ${positionOffsetPixels.toFloat() * 0.3F}, rotate: ${positionOffsetPixels.toFloat() * 0.03F}")
+                animationChange = positionOffsetPixels.toFloat() * 2
             }
-            else
-                binding!!.screen1Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.incoming_right_animation))
+            positionOffsetPixels in 101..200 -> {
+                binding!!.man.translationX = animationChange - positionOffsetPixels.toFloat()
+                binding!!.man.rotation = positionOffsetPixels.toFloat() * 0.03F
+                binding!!.man.alpha = 1.0F - positionOffset * 2
+    //            Log.i("OnPage", "51..100: translate: ${animationChange - positionOffsetPixels.toFloat()}, rotate: ${positionOffsetPixels.toFloat() * 0.03F}")
+            }
+            else -> {
+                binding!!.man.translationX = animationChange - positionOffsetPixels.toFloat()
+                binding!!.man.rotation = positionOffsetPixels.toFloat() * 0.03F
+                binding!!.man.alpha = 1.0F - positionOffset * 2
+    //            Log.i("OnPage", "51..100: translate: ${animationChange - positionOffsetPixels.toFloat()}")
+            }
         }
-    }
 
-    fun outgoingAnimation() {
-        if (previousPosition > currentPosition){
-//            binding!!.screen1Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_left_animation))
-            binding!!.background.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_left_rotate_anti))
-            binding!!.planner.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_out_left))
-            binding!!.man.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.slide_left_man))
-        }
-        else
-            binding!!.screen1Layout.startAnimation(AnimationUtils.loadAnimation(mContext, R.anim.outgoing_right_animation))
+        binding!!.background.translationX = - positionOffsetPixels.toFloat()
+        binding!!.background.rotation = - positionOffsetPixels.toFloat() * 0.07F
+        binding!!.background.alpha = 1.0F - positionOffset * 2
+
+        binding!!.planner.translationX = - positionOffsetPixels.toFloat() * 0.2F
+        binding!!.planner.alpha = 1.0F - positionOffset * 2
     }
 }
