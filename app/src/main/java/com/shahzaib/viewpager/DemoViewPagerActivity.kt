@@ -3,10 +3,10 @@ package com.shahzaib.viewpager
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.shahzaib.viewpager.databinding.DemoViewpagerActivityBinding
+import kotlin.math.round
 
 class DemoViewPagerActivity: AppCompatActivity() {
     private lateinit var binding: DemoViewpagerActivityBinding
@@ -30,19 +30,33 @@ class DemoViewPagerActivity: AppCompatActivity() {
             mAdapter.createFragment(position)
         }
 
-        binding.tabLayout.addOnTabSelectedListener(object : OnTabSelectedListener {
-            override fun onTabSelected(tab: TabLayout.Tab) {
+        var prevPosOffset: Float = 0F
+        var previousSwipingDirection = "Left"
+        binding.pager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageScrollStateChanged(state: Int) {}
+            override fun onPageScrolled(pageNumber: Int, positionOffset: Float, positionOffsetPixels: Int) {
                 mPreviousPosition = mSelectedPosition
-                mSelectedPosition = tab.position
-                Log.e("onTabSelected", "Previous: $mPreviousPosition Selected: $mSelectedPosition")
-                mAdapter.selectedTab(mPreviousPosition, mSelectedPosition)
+
+//                mAdapter.incomingPage(mPreviousPosition, pageNumber, positionOffset, positionOffsetPixels)
+                var swipingDirection = ""
+                if (positionOffset == 0.0f)
+                    swipingDirection = "Halt"
+                else if (prevPosOffset > positionOffset)
+                    swipingDirection = "Right"
+                else
+                    swipingDirection = "Left"
+
+                Log.i("OnPageScrolled", "position: $pageNumber\tpositionOffset: ${round(positionOffset*100).toInt()}\tpositionOffsetPixels: $positionOffsetPixels\tswipingDirection: $swipingDirection")
+
+                mAdapter.pageAnimation(pageNumber, positionOffset, positionOffsetPixels)
+
+
+                mSelectedPosition = pageNumber
+                prevPosOffset = positionOffset
+                previousSwipingDirection = swipingDirection
             }
 
-            override fun onTabUnselected(tab: TabLayout.Tab) {
-                mAdapter.unSelectedTab(tab.position)
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab) {}
+            override fun onPageSelected(position: Int) {}
         })
 
         binding.pager.adapter = mAdapter
