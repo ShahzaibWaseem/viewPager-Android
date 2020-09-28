@@ -1,10 +1,12 @@
 package com.shahzaib.viewpager
 
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.shahzaib.viewpager.Tabs.*
+import kotlin.math.round
 
 class ViewPagerAdapter (fm: FragmentManager, lifecycle: Lifecycle): FragmentStateAdapter(fm, lifecycle) {
     private var tab1 = Tab1()
@@ -14,6 +16,8 @@ class ViewPagerAdapter (fm: FragmentManager, lifecycle: Lifecycle): FragmentStat
     private var tab5 = Tab5()
     private var tab6 = Tab6()
     private var tab7 = Tab7()
+
+    private var maxPixels = 1080
 
     override fun getItemCount(): Int {
         return 7
@@ -36,58 +40,58 @@ class ViewPagerAdapter (fm: FragmentManager, lifecycle: Lifecycle): FragmentStat
             return tab7
     }
 
-    fun selectedTab (previousTab: Int, currentPosition: Int) {
-        if (currentPosition == 0) {
-            tab1.setPrevious(previousTab)
-            tab1.startAnimation()
+    fun pageAnimation (pageNumber: Int, positionOffset: Float, positionOffsetPixels: Int) {
+        if (round(positionOffset*100).toInt() == 100)
+        {
+            maxPixels = positionOffsetPixels
+            Log.i("OnPage", "maxPixels: $maxPixels")
         }
-        else if (currentPosition == 1) {
-            tab2.setPrevious(previousTab)
-            tab2.startAnimation()
-        }
-        else if (currentPosition == 2) {
-            tab3.setPrevious(previousTab)
-            tab3.startAnimation()
-        }
-        else if (currentPosition == 3) {
-            tab4.setPrevious(previousTab)
-            tab4.startAnimation()
-        }
-        else if (currentPosition == 4) {
-            tab5.setPrevious(previousTab)
-            tab5.startAnimation()
-        }
-        else if (currentPosition == 5) {
-            tab6.setPrevious(previousTab)
-            tab6.startAnimation()
-        }
-        else {
-            tab7.setPrevious(previousTab)
-            tab7.startAnimation()
-        }
-    }
 
-    fun unSelectedTab (currentPosition: Int) {
-        if (currentPosition == 0) {
-            tab1.outgoingAnimation()
+        if (pageNumber == 0) {
+            tab1.animateImages(positionOffset, positionOffsetPixels)
+            tab1.animateText(positionOffset, -positionOffsetPixels)
+            // Handles incoming animations for the incoming page
+            tab2.animateImages(1 - positionOffset, maxPixels - positionOffsetPixels)
+            tab2.animateText(1 - positionOffset, maxPixels - positionOffsetPixels)
         }
-        else if (currentPosition == 1) {
-            tab2.outgoingAnimation()
+        else if (pageNumber == 1) {
+            tab2.animateImages(positionOffset, positionOffsetPixels)
+            tab2.animateText(positionOffset, -positionOffsetPixels)
+            // Handles incoming animations for the incoming page
+            tab3.animateImages(1 - positionOffset, maxPixels - positionOffsetPixels)
+            tab3.animateText(1 - positionOffset, maxPixels - positionOffsetPixels)
         }
-        else if (currentPosition == 2) {
-            tab3.outgoingAnimation()
+        else if (pageNumber == 2) {
+            tab3.animateImages(positionOffset, positionOffsetPixels)
+            tab3.animateText(positionOffset, -positionOffsetPixels)
+            // Handles incoming animations for the incoming page
+            tab4.animateImages(1 - positionOffset, maxPixels - positionOffsetPixels)
+            tab4.animateText(1 - positionOffset, maxPixels - positionOffsetPixels)
         }
-        else if (currentPosition == 3) {
-            tab4.outgoingAnimation()
+        else if (pageNumber == 3) {
+            tab4.animateImages(positionOffset, positionOffsetPixels)
+            tab4.animateText(positionOffset, -positionOffsetPixels)
+            // Handles incoming animations for the incoming page
+            tab5.animateImages(1 - positionOffset, maxPixels - positionOffsetPixels)
+            tab5.animateText(1 - positionOffset, maxPixels - positionOffsetPixels)
         }
-        else if (currentPosition == 4) {
-            tab5.outgoingAnimation()
+        else if (pageNumber == 4) {
+            tab5.animateImages(positionOffset, positionOffsetPixels)
+            tab5.animateText(positionOffset, -positionOffsetPixels)
+            // Handles incoming animations for the incoming page
+            tab6.animateImages(1 - positionOffset, maxPixels - positionOffsetPixels)
+            tab6.animateText(1 - positionOffset, maxPixels - positionOffsetPixels)
         }
-        else if (currentPosition == 5) {
-            tab6.outgoingAnimation()
+        else if (pageNumber == 5) {
+            tab6.animateImages(positionOffset, positionOffsetPixels)
+            tab6.animateText(positionOffset, -positionOffsetPixels)
+            // Handles incoming animations for the incoming page
+            tab7.animateImages(1 - positionOffset, maxPixels - positionOffsetPixels)
+            tab7.animateText(1 - positionOffset, maxPixels - positionOffsetPixels)
         }
         else {
-            tab7.outgoingAnimation()
+            tab7.animateImages(positionOffset, positionOffsetPixels)
+            tab7.animateText(positionOffset, -positionOffsetPixels)
         }
     }
 }
