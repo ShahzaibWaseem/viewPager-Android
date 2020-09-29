@@ -41,8 +41,7 @@ class ViewPagerAdapter (fm: FragmentManager, lifecycle: Lifecycle): FragmentStat
     }
 
     fun pageAnimation (pageNumber: Int, positionOffset: Float, positionOffsetPixels: Int) {
-        if (round(positionOffset*100).toInt() == 100)
-        {
+        if (round(positionOffset*100).toInt() == 100) {
             maxPixels = positionOffsetPixels
             Log.i("OnPage", "maxPixels: $maxPixels")
         }
