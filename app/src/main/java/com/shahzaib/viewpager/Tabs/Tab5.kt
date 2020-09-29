@@ -20,11 +20,11 @@ class Tab5: BaseFragment() {
 
     fun animateImages(positionOffset: Float, positionOffsetPixels: Int) {
         binding.background.translationX = positionOffsetPixels.toFloat() * 0.6F
-        binding.background.rotation = - positionOffsetPixels.toFloat() * 0.03F
+        binding.background.translationY = positionOffsetPixels.toFloat() * 0.6F
         binding.background.alpha = 1.0F - positionOffset * 2
 
         binding.computer.translationX = positionOffsetPixels.toFloat() * 0.6F
-        binding.computer.rotation = - positionOffsetPixels.toFloat() * 0.03F
+        binding.computer.translationY = positionOffsetPixels.toFloat() * 0.6F
         binding.computer.alpha = 1.0F - positionOffset * 2
 
         binding.man.translationX = - positionOffsetPixels.toFloat() * 0.4F

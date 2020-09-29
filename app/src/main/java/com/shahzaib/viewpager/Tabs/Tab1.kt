@@ -22,18 +22,18 @@ class Tab1 : BaseFragment() {
     fun animateImages(positionOffset: Float, positionOffsetPixels: Int) {
         when {
             positionOffsetPixels <= 100 -> {
-                binding!!.man.translationX = positionOffsetPixels.toFloat()
+                binding!!.man.translationX = positionOffsetPixels.toFloat() * 2
                 binding!!.man.rotation = positionOffsetPixels.toFloat() * 0.03F
                 binding!!.man.alpha = 1.0F - positionOffset * 2
-                animationChange = positionOffsetPixels.toFloat() * 2
+                animationChange = positionOffsetPixels.toFloat() * 2 * 2
             }
             positionOffsetPixels in 101..200 -> {
-                binding!!.man.translationX = animationChange - positionOffsetPixels.toFloat()
+                binding!!.man.translationX = animationChange - positionOffsetPixels.toFloat() * 2
                 binding!!.man.rotation = positionOffsetPixels.toFloat() * 0.03F
                 binding!!.man.alpha = 1.0F - positionOffset * 2
             }
             else -> {
-                binding!!.man.translationX = animationChange - positionOffsetPixels.toFloat()
+                binding!!.man.translationX = animationChange - positionOffsetPixels.toFloat() * 2
                 binding!!.man.rotation = positionOffsetPixels.toFloat() * 0.03F
                 binding!!.man.alpha = 1.0F - positionOffset * 2
             }

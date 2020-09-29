@@ -20,6 +20,7 @@ class Tab7: BaseFragment() {
 
     fun animateImages(positionOffset: Float, positionOffsetPixels: Int) {
         binding.background.translationX = positionOffsetPixels.toFloat() * 0.6F
+        binding.background.rotation = - positionOffsetPixels.toFloat() * 0.02F
         binding.background.alpha = 1.0F - positionOffset * 2
 
         binding.plant.translationX = positionOffsetPixels.toFloat() * 0.2F

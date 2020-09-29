@@ -21,45 +21,45 @@ class Tab3: BaseFragment() {
 
     fun animateImages(positionOffset: Float, positionOffsetPixels: Int) {
         when {
-            positionOffsetPixels <= 150 -> {
-                binding.background.translationX = - positionOffsetPixels.toFloat() * 0.7F
-                binding.background.translationY = positionOffsetPixels.toFloat() * 0.7F
-                binding.background.rotation = - positionOffsetPixels.toFloat() * 0.07F
+            positionOffsetPixels <= 200 -> {
+                binding.background.translationX = - positionOffsetPixels.toFloat()
+                binding.background.rotation = positionOffsetPixels.toFloat() * 0.07F
                 binding.background.alpha = 1.0F - positionOffset * 2
 
-                binding.pills.translationX = - positionOffsetPixels.toFloat() * 0.7F
-                binding.pills.translationY = positionOffsetPixels.toFloat() * 0.7F
-                binding.pills.rotation = - positionOffsetPixels.toFloat() * 0.07F
+                binding.pills.translationX = - positionOffsetPixels.toFloat()
+                binding.pills.rotation = positionOffsetPixels.toFloat() * 0.07F
                 binding.pills.alpha = 1.0F - positionOffset * 2
 
-                animationChange = - positionOffsetPixels.toFloat() * 2 * 0.7F
+                animationChange = - positionOffsetPixels.toFloat() * 2
             }
-            positionOffsetPixels in 151..300 -> {
-                binding.background.translationX = animationChange + positionOffsetPixels.toFloat() * 0.7F
-                binding.background.rotation = - positionOffsetPixels.toFloat() * 0.07F
+            positionOffsetPixels in 201..400 -> {
+                binding.background.translationX = animationChange + positionOffsetPixels.toFloat()
+                binding.background.rotation = positionOffsetPixels.toFloat() * 0.07F
                 binding.background.alpha = 1.0F - positionOffset * 2
 
-                binding.pills.translationX = animationChange + positionOffsetPixels.toFloat() * 0.7F
-                binding.pills.rotation = - positionOffsetPixels.toFloat() * 0.07F
+                binding.pills.translationX = animationChange + positionOffsetPixels.toFloat()
+                binding.pills.rotation = positionOffsetPixels.toFloat() * 0.07F
                 binding.pills.alpha = 1.0F - positionOffset * 2
             }
-
             else -> {
-                binding.background.translationX = animationChange + positionOffsetPixels.toFloat() * 0.7F
-                binding.background.rotation = - positionOffsetPixels.toFloat() * 0.07F
+                binding.background.translationX = animationChange + positionOffsetPixels.toFloat()
+                binding.background.rotation = positionOffsetPixels.toFloat() * 0.07F
                 binding.background.alpha = 1.0F - positionOffset * 2
 
-                binding.pills.translationX = animationChange + positionOffsetPixels.toFloat() * 0.7F
-                binding.pills.rotation = - positionOffsetPixels.toFloat() * 0.07F
+                binding.pills.translationX = animationChange + positionOffsetPixels.toFloat()
+                binding.pills.rotation = positionOffsetPixels.toFloat() * 0.07F
                 binding.pills.alpha = 1.0F - positionOffset * 2
             }
         }
 
-        binding.alarmClock.translationX = positionOffsetPixels.toFloat() * 0.6F
-        binding.alarmClock.alpha = 1.0F - positionOffset * 2
+        binding.background.translationY = - positionOffsetPixels.toFloat() * 0.5F
+        binding.pills.translationY = - positionOffsetPixels.toFloat() * 0.5F
 
         binding.man.translationX = - positionOffsetPixels.toFloat() * 0.2F
         binding.man.alpha = 1.0F - positionOffset * 2
+
+        binding.alarmClock.translationX = positionOffsetPixels.toFloat() * 2
+        binding.alarmClock.alpha = 1.0F - positionOffset * 2
     }
 
     fun animateText(positionOffset: Float, positionOffsetPixels: Int) {
