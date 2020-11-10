@@ -32,15 +32,6 @@ class Tab3: BaseFragment() {
 
                 animationChange = - positionOffsetPixels.toFloat() * 2
             }
-            positionOffsetPixels in 201..400 -> {
-                binding.background.translationX = animationChange + positionOffsetPixels.toFloat()
-                binding.background.rotation = positionOffsetPixels.toFloat() * 0.07F
-                binding.background.alpha = 1.0F - positionOffset * 2
-
-                binding.pills.translationX = animationChange + positionOffsetPixels.toFloat()
-                binding.pills.rotation = positionOffsetPixels.toFloat() * 0.07F
-                binding.pills.alpha = 1.0F - positionOffset * 2
-            }
             else -> {
                 binding.background.translationX = animationChange + positionOffsetPixels.toFloat()
                 binding.background.rotation = positionOffsetPixels.toFloat() * 0.07F
